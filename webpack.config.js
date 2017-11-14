@@ -44,6 +44,7 @@ module.exports = {
       { from: path.join(__dirname, 'node_modules', '@mapd', 'connector', 'dist', 'browser-connector.js'), to: path.join(__dirname, 'dist', 'mapd') },
       { from: path.join(__dirname, 'node_modules', '@mapd', 'crossfilter', 'dist', 'mapd-crossfilter.js'), to: path.join(__dirname, 'dist', 'mapd') },
       { from: path.join(__dirname, 'node_modules', '@mapd', 'mapdc', 'dist', 'mapdc.js'), to: path.join(__dirname, 'dist', 'mapd') },
+      { from: path.join(__dirname, 'node_modules', '@mapd', 'mapdc', 'dist', 'mapdc.css'), to: path.join(__dirname, 'dist', 'mapd') },
       { from: path.join(__dirname, 'node_modules', 'd3', 'd3.min.js'), to: path.join(__dirname, 'dist', 'mapd') },
     ])
   ]

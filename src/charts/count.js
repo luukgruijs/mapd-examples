@@ -1,6 +1,6 @@
 module.exports = (crossFilter) => {
-    var countGroup = crossFilter.groupAll();
-    var countWidget = dc.countWidget(".data-count")
+    const group = crossFilter.groupAll();
+    const countWidget = dc.countWidget(".data-count")
         .dimension(crossFilter)
-        .group(countGroup);
+        .group(group);
 }

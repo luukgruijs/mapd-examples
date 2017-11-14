@@ -1,12 +1,23 @@
 "use strict"
 
 const count = require("./charts/count");
+const row = require("./charts/row");
+const bubble = require("./charts/bubble");
+const pie = require("./charts/pie");
 
 const createCharts = (crossFilter) => {
 
+    console.log(crossFilter.getColumns());
+
+    const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) - 50;
+    const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 200;
+    const colors = ["#22A7F0", "#3ad6cd", "#d4e666"];
+
     // call all the charts
     count(crossFilter);
-
+    row(crossFilter, w, h, colors);
+    bubble(crossFilter, w, h, colors);
+    pie(crossFilter, w, h, colors);
 
     // render all the charts
     dc.renderAllAsync();

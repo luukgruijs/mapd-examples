@@ -2,9 +2,24 @@
 <html>
 <head>
     <title>Mapd examples</title>
+    <link rel="stylesheet" href="/dist/mapd/mapdc.css">
 </head>
 <body>
-    <div class="data-count"></div>
+    <div class="header">
+        <div class="data-count"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="col-6">
+            <div class="row-chart"></div>
+        </div>
+        <div class="col-6">
+            <div class="bubble-chart"></div>
+        </div>
+        <div class="col-4">
+            <div class="pie-chart"></div>
+        </div>
+    </div>
 
     <script src="/dist/mapd/d3.min.js"></script>
     <script src="/dist/mapd/browser-connector.js"></script>
