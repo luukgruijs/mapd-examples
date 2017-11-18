@@ -1,5 +1,5 @@
 module.exports = (crossFilter, width, height, colors) => {
-    const dimension = crossFilter.dimension("dest_state");
+    const dimension = crossFilter.dimension("dest");
     const group = dimension.group().reduceCount();
 
     const rowChart = dc.rowChart(".row-chart")
@@ -12,5 +12,6 @@ module.exports = (crossFilter, width, height, colors) => {
         .measureLabelsOn(true)
         .dimension(dimension)
         .group(group)
-        .autoScroll(true);
+        .autoScroll(true)
+        .xAxisLabel('Number of flights by dest airport');
 }

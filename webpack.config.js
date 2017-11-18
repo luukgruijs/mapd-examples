@@ -1,10 +1,12 @@
-var webpack = require("webpack");
+const webpack = require("webpack");
+const path = require("path");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-var path = require("path");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
     charts: path.resolve(__dirname, 'src', 'index.js'),
+    style: path.join(__dirname, 'src', 'styles', 'style.scss')
   },
   devtool: "source-map",
   output: {
@@ -30,12 +32,14 @@ module.exports = {
         use: ["style-loader", "css-loader" ]
       },
       {
-        test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        test: /\.scss|\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader',
+            {
+              loader: 'sass-loader'
+            }]
+        })
       }
     ],
   },
@@ -46,6 +50,11 @@ module.exports = {
       { from: path.join(__dirname, 'node_modules', '@mapd', 'mapdc', 'dist', 'mapdc.js'), to: path.join(__dirname, 'dist', 'mapd') },
       { from: path.join(__dirname, 'node_modules', '@mapd', 'mapdc', 'dist', 'mapdc.css'), to: path.join(__dirname, 'dist', 'mapd') },
       { from: path.join(__dirname, 'node_modules', 'd3', 'd3.min.js'), to: path.join(__dirname, 'dist', 'mapd') },
-    ])
+    ]),
+
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      allChunks: true
+    }),
   ]
 };
