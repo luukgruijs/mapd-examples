@@ -5,7 +5,7 @@ module.exports = (crossFilter, width, height, colors, bounds) => {
 
     const lineChart = dc.lineChart('.line-chart')
         .width(width/2)
-        .height(height/2)
+        .height(height/1.5)
         .elasticY(true)
         .renderHorizontalGridLines(true)
         .brushOn(true)

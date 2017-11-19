@@ -12,29 +12,88 @@
 
     <div class="wrapper">
         <div class="row">
-            <div class="chart col-12">
-                <div id="geochoropleth-chart"></div>
+            <div class="chart col-6">
+                <div class="chart__title">
+                    <p>Flights by destination state</p>
+                </div>
+                <div class="chart__body">
+                    <div id="geochoropleth-chart"></div>
+                    <div class="bar-chart"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 chart">
+                        <div class="chart__title">
+                            <p>Total flight distance</p>
+                        </div>
+                        <div class="chart__body">
+                            <div class="number-flight-distance"></div>
+                        </div>
+                    </div>
+                    <div class="col-6 chart">
+                        <div class="chart__title">
+                            <p>Number of flights</p>
+                        </div>
+                        <div class="chart__body">
+                            <div class="number-flights"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 chart">
+                        <div class="chart__title">
+                            <p>Average airtime</p>
+                        </div>
+                        <div class="chart__body">
+                            <div class="number-avg-airtime"></div>
+                        </div>
+                    </div>
+                    <div class="col-6 chart">
+                        <div class="chart__title">
+                            <p>Average arrival delay</p>
+                        </div>
+                        <div class="chart__body">
+                            <div class="number-avg-arrdelay"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="bar-chart"></div>
+            <div class="col-6 chart">
+                <div class="chart__title">
+                    <p>Flights by destination airport</p>
+                </div>
+                <div class="chart__body">
+                    <div class="row-chart"></div>
+                </div>
+            </div>
+            <div class="col-6 chart">
+                <div class="chart__title">
+                    <p>Delay by airline</p>
+                </div>
+                <div class="chart__body">
+                    <div class="bubble-chart"></div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <div class="row-chart"></div>
-            </div>
-            <div class="col-6">
-                <div class="bubble-chart"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="pie-chart"></div>
+            <div class="col-6 chart">
+                <div class="chart__title">
+                    <p>Fligts by plane manufacturer</p>
+                </div>
+                <div class="chart__body">
+                    <div class="pie-chart"></div>
+                </div>
             </div>            
-            <div class="col-6">
-                <div class="line-chart"></div>
+            <div class="col-6 chart">
+                <div class="chart__title">
+                    <p>Average flight distance</p>
+                </div>
+                <div class="chart__body">
+                    <div class="line-chart"></div>
+                </div>
             </div>            
         </div>
     </div>

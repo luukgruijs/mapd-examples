@@ -7,8 +7,8 @@ module.exports = (crossFilter, width, height, colors) => {
         const colors = d3.scale.quantize().domain([0, 50000]).range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]);
     
         const geochoroplethChart = dc.geoChoroplethChart('#geochoropleth-chart')
-            .width(width)
-            .height(height/1)
+            .width(width/2)
+            .height(height/2)
             .dimension(dimension)
             .group(group)
             .title('Destination state')
@@ -21,6 +21,6 @@ module.exports = (crossFilter, width, height, colors) => {
             })
             .valueAccessor(function(kv) {
                 return kv.val;
-            })
+            });
     })
 }

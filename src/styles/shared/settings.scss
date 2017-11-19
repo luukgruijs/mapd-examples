@@ -8,3 +8,11 @@ body {
     background-color: #f7f7f7;
     padding-top: 60px;
 }
+
+.wrapper {
+    padding: 15px;
+    .row {
+        width: 100%;
+        display: flex;
+    }
+}

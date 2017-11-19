@@ -12,6 +12,5 @@ module.exports = (crossFilter, width, height, colors) => {
         .measureLabelsOn(true)
         .dimension(dimension)
         .group(group)
-        .autoScroll(true)
-        .xAxisLabel('Number of flights by dest airport');
+        .autoScroll(true);
 }

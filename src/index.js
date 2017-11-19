@@ -7,6 +7,7 @@ const pie = require("./charts/pie");
 const bar = require("./charts/bar");
 const line = require("./charts/line");
 const geochoropleth = require("./charts/geochoropleth");
+const number = require("./charts/number");
 
 const createCharts = (crossFilter) => {
 
@@ -52,6 +53,7 @@ const createCharts = (crossFilter) => {
             bar(crossFilter, w, h, colors, bounds);
             geochoropleth(crossFilter, w, h, colors);
             line(crossFilter, w, h, colors, bounds);
+            number(crossFilter, h,  colors);
 
             // render all the charts
             dc.renderAllAsync();
