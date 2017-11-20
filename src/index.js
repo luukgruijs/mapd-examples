@@ -11,8 +11,6 @@ const number = require("./charts/number");
 
 const createCharts = (crossFilter) => {
 
-    console.log(crossFilter.getColumns());
-
     const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) - 50;
     const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 200;
     const colors = ["#22A7F0", "#3ad6cd", "#d4e666"];
@@ -57,7 +55,6 @@ const createCharts = (crossFilter) => {
 
             // render all the charts
             dc.renderAllAsync();
-
         });
 }
 
